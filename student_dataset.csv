@@ -1,0 +1,38 @@
+
+import csv
+
+# Fictional Student Dataset
+students = [
+    ["STU001", "Computer Science", 100, 95, 88.5],
+    ["STU002", "Cyber Security", 200, 91, 76.0],
+    ["STU003", "Information Technology", 300, 87, 82.5],
+    ["STU004", "Computer Science", 200, 78, 69.0],
+    ["STU005", "Software Engineering", 100, 96, 91.5],
+    ["STU006", "Cyber Security", 300, 84, 73.5],
+    ["STU007", "Data Science", 400, 93, 89.0],
+    ["STU008", "Information Technology", 200, 89, 80.0],
+    ["STU009", "Software Engineering", 300, 81, 75.5],
+    ["STU010", "Data Science", 100, 97, 94.0],
+    ["STU011", "Computer Science", 400, 90, 86.0],
+    ["STU012", "Cyber Security", 100, 88, 79.5],
+    ["STU013", "Information Technology", 400, 92, 84.0],
+    ["STU014", "Software Engineering", 200, 85, 77.0],
+    ["STU015", "Data Science", 300, 94, 90.5]
+]
+
+# Dataset column names
+columns = [
+    "Student ID",
+    "Department",
+    "Level",
+    "Attendance Percentage",
+    "Average Examination Score"
+]
+
+# Create CSV file
+with open("student_dataset.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(columns)
+    writer.writerows(students)
+
+print("Student dataset created successfully!")
